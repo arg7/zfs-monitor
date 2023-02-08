@@ -15,7 +15,7 @@ zpool-visualize.sh takes zpool name as argument and creates set of termux panels
 
 ![complex pool io activity](/doc/compex-pool.png)
 
-Left panel shows all pool vdev disks as a map. Yellow block rapresents disk reads and purple - disk writes.
+Left panel shows all pool vdev disks as a map. Yellow block represents disk reads and purple - disk writes.
 
 Upper-right panel shows list of data blocks read or written.
 Lower-right panel is a bash, you can use it to spawn disk io activity.
