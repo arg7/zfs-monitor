@@ -36,7 +36,7 @@ find_dd() {
 }
 
 #echo "${dn[@]}"
-
+read;read
 while read -r tm app pid op dsk blk sz l
 do
     i=${ddi[$dsk]}

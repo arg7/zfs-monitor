@@ -22,7 +22,7 @@ Lower-right panel is a bash, you can use it to spawn disk io activity.
 
 ## dsk-peek.sh
 
-example: **iosnoop-perf -s | ./dsk-peek.sh -v /dev/sda /dev/sdb**
+example: **iosnoop-perf -s 2>/dev/null | ./dsk-peek.sh -v /dev/sda /dev/sdb**
   
 dsk-peek.sh utility takes iosnoop-perf output as an input and list of disks as argument.
 In output it adds dump of data readed/written, maximum size 256 bytes. If longer, it shows first and last 128 bytes. 
@@ -30,7 +30,7 @@ Use "-vv" to dump all data.
 
 ## dsk-visualize.sh
 
-example: **iosnoop-perf -s | ./dsk-visualize.sh /dev/sda /dev/sdb**
+example: **iosnoop-perf -s 2>/dev/null | ./dsk-visualize.sh /dev/sda /dev/sdb**
 
 shows realtime disk activity for selected disks.
 

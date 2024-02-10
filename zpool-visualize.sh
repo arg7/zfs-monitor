@@ -30,6 +30,6 @@ y=$(tput lines)
 
 echo "monitoring $disks"
 tmux new-session \; set mouse on\; split-window -h -l 90\; split-window -v -l 20\;\
-     select-pane -t 1 \; send-keys "iosnoop-perf -s | tee /var/$1.fifo | ./dsk-peek.sh -v $disks" C-m\;\
+     select-pane -t 1 \; send-keys "iosnoop-perf -s 2>/dev/null | tee /var/$1.fifo | ./dsk-peek.sh -v $disks" C-m\;\
      select-pane -t 0 \; send-keys "cat /var/$1.fifo | ./dsk-visualize.sh $disks" C-m\;\
      select-pane -t 2 \; send-keys "echo use this panel to perform io tests on pool '$1'" C-m
